@@ -1,0 +1,130 @@
+@use '../helpers'as *;
+
+.feedback {
+    padding-top: 120px;
+    padding-bottom: 250px;
+
+    &__title {
+        color: var(--primary-color);
+        font-size: 40px;
+        font-weight: 600;
+        margin: 0;
+
+        &.underline-text::after {
+            bottom: 7px;
+            left: 12px;
+            right: 12px;
+            width: calc(100% - 24px);
+        }
+
+        @media (min-width: 767px) {
+            font-size: 60px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__subtitle {
+        color: var(--primary-color);
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        padding: 20px;
+        width: calc(33% - 20px);
+        color: var(--primary-color);
+
+        @include desktop-max {
+            width: calc(50% - 10px);
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-bottom: 20px;
+            }
+
+            &:nth-child(3) {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                max-width: unset;
+                width: 100%;
+                margin: 0;
+                margin-bottom: 30px;
+            }
+            &:nth-child(3) {
+                margin-bottom: 0;
+            }
+        }
+
+        &--first {
+            background-color: #edeefd;
+        }
+
+        &--second {
+            background-color: #fff2e8;
+        }
+
+        &--third {
+            background-color: #d1fce8;
+        }
+
+        &-title {
+            font-size: 22px;
+            font-weight: 700;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-text {
+            font-size: 16px;
+            line-height: 32px;
+
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+
+        &-icons {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        &-service {
+            width: 24px;
+            height: 24px;
+            margin-right: 6px;
+        }
+
+        &-star {
+            font-size: 12px;
+
+            &--inactive {
+                color: #b9b6c5;
+            }
+        }
+    }
+}

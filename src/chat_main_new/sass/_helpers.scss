@@ -1,0 +1,55 @@
+@function max($numbers...) {
+	@return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+	@return m#{i}n(#{$numbers});
+}
+
+@mixin supports-safe-area-insets {
+	// stylelint-disable-next-line
+	@supports (padding: max(0px)) {
+		@content;
+	}
+}
+
+@mixin hover {
+	.has-hover &:not([disabled]):hover {
+		@content;
+	}
+}
+
+@mixin active-hover {
+	.has-hover &.is-active:hover {
+		@content;
+	}
+}
+
+@mixin active {
+	&.is-active {
+		@content;
+	}
+}
+
+@mixin disabled {
+	&.is-disabled,
+	&:disabled {
+		@content;
+	}
+}
+
+// Breakpoints
+$desktop: 1024;
+$tablet: 768;
+
+@mixin desktop-min {
+	@media (min-width: ($desktop * 1px)) {
+		@content;
+	}
+}
+
+@mixin desktop-max {
+	@media (max-width: (($desktop - 1) * 1px)) {
+		@content;
+	}
+}

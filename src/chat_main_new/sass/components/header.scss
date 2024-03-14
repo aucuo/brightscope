@@ -1,0 +1,263 @@
+@use '../helpers'as *;
+
+.header {
+    position: absolute;
+    width: 100%;
+    padding: 20px 0;
+    right: unset !important;
+    z-index: 2;
+
+    &__wrapper {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        margin-right: 60px;
+    }
+
+    &__left {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    &__right {
+        display: none;
+
+        @include desktop-min {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin-top: 8px;
+        }
+    }
+
+    &__menu {
+        @include desktop-max {
+            background-color: #fff;
+            height: calc(100vh - 85px);
+            left: 0;
+            margin-top: 85px;
+            opacity: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 50px 20px;
+            position: fixed;
+            top: 0;
+            -webkit-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+            visibility: hidden;
+            width: 100vw;
+            z-index: 1001;
+            -webkit-transition: 0.4s;
+            -o-transition: 0.4s;
+            transition: 0.4s;
+
+            @include active {
+                opacity: 1;
+                -webkit-transform: translateX(0);
+                -ms-transform: translateX(0);
+                transform: translateX(0);
+                visibility: visible;
+                background-color: var(--primary-color);
+                width: 100vw;
+            }
+        }
+
+        @include desktop-min {
+            margin-top: 10px;
+        }
+
+        @supports (padding: max(0px)) {
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+
+    &__row {
+        @include desktop-max {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            height: 100%;
+        }
+    }
+
+    &__list {
+        @include desktop-max {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+    }
+
+    &__link {
+        color: #fff;
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 1.6px;
+        position: relative;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+
+        @include hover {
+            &:after {
+                width: 100%;
+            }
+        }
+
+        &:after {
+            background-color: var(--secondary-color);
+            bottom: -5px;
+            content: "";
+            height: 3px;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            -webkit-transition: 0.4s;
+            -o-transition: 0.4s;
+            transition: 0.4s;
+            width: 0;
+        }
+
+        &.is-active:after {
+            width: 100%;
+        }
+
+        @include desktop-min {
+            font-size: 15px;
+        }
+
+        &:not(:last-child) {
+            @include desktop-max {
+                margin-bottom: 20px;
+            }
+
+            @include desktop-min {
+                margin-right: 34px;
+            }
+        }
+    }
+
+    &__auth,
+    &__free {
+        @include desktop-max {
+            margin-bottom: 20px;
+        }
+
+        @include desktop-min {
+            margin-left: 31px;
+        }
+    }
+
+    &__mobile {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: auto;
+
+        @include desktop-min {
+            display: none !important;
+        }
+    }
+
+    &__burger {
+        display: inline-block;
+        height: 20px;
+        position: relative;
+        width: 25px;
+
+        span {
+            background-color: #fff;
+            height: 2px;
+            left: 0;
+            position: absolute;
+            -webkit-transition: 0.4s;
+            -o-transition: 0.4s;
+            transition: 0.4s;
+            width: 100%;
+
+            &:first-child {
+                top: 0;
+            }
+
+            &:nth-child(2) {
+                bottom: 0;
+                margin: auto;
+                top: 0;
+            }
+
+            &:nth-child(3) {
+                bottom: 0;
+            }
+
+            @include desktop-min {
+                background-color: var(--primary-color);
+            }
+        }
+
+        @include active {
+            span {
+                &:nth-child(2) {
+                    right: 100%;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                &:first-child {
+                    top: 9px;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(3) {
+                    bottom: 9px;
+                    -webkit-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        @include desktop-min {
+            display: none;
+        }
+    }
+}

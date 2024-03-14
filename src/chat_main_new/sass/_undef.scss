@@ -1,0 +1,237 @@
+.inner-page {
+    background-color: var(--primary-color);
+}
+
+.inner-page .header {
+    background-color: transparent;
+}
+
+.inner-page .header__link,
+.inner-page .lang__current {
+    color: #fff;
+}
+
+.has-hover .inner-page .btn__primary:not([disabled]):hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #fff;
+}
+
+.has-hover .inner-page .btn__secondary:not([disabled]):hover {
+    background-color: transparent;
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.main-title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 35px;
+    color: var(--primary-color);
+}
+
+@media (min-width: 767px) {
+    .main-title {
+        margin-bottom: 70px;
+    }
+}
+
+.auth {
+    padding-bottom: 20px;
+    min-height: 100vh;
+    background-color: #f0f2f7;
+}
+
+.auth__block {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.auth__bg {
+    padding: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    width: 100% !important;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    color: #fff;
+    border-radius: 4px;
+    background-color: var(--third-hero-block);
+}
+
+.auth__icon {
+    font-size: 40px;
+    color: #c8bbff;
+}
+
+.auth__header {
+    margin-bottom: 31px;
+}
+
+.auth header {
+    padding: 20px 0;
+}
+
+@media (min-width: 1024px) {
+    .auth header {
+        padding: 40px 0;
+    }
+}
+
+.auth__logo {
+    display: inline-block;
+    width: 165px;
+    height: auto;
+}
+
+.auth__title {
+    margin-bottom: 3px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    color: #023047;
+}
+
+.auth__subtitle {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #023047;
+    letter-spacing: 1.5px;
+}
+
+.auth__profile-icon {
+    margin-bottom: 70px;
+    font-size: 100px;
+}
+
+.auth__profile-title {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 2px;
+}
+
+.auth__profile-title:not(:last-child) {
+    margin-bottom: 90px;
+}
+
+.auth__form a {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1;
+    color: var(--third-hero-block);
+}
+
+.auth__form {
+    margin: 0;
+}
+
+@media (min-width: 996px) {
+    .auth__form {
+        padding-left: 20px;
+    }
+}
+
+.auth__group {
+    margin-bottom: 22px;
+}
+
+.auth__group .b-form-1__group {
+    margin-bottom: 21px;
+}
+
+.auth__button {
+    margin-top: 19px;
+}
+
+.auth__desc {
+    margin-top: 26px;
+    font-weight: 500;
+
+    font-size: 11px;
+    line-height: 1.4;
+    letter-spacing: 1.1px;
+    color: #023047;
+}
+
+.auth__terms {
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+    color: #8d8ea3;
+}
+
+.prices {
+    margin: 0 -5px !important;
+    color: #023047;
+}
+
+.price__item {
+    position: relative;
+    padding: 0 5px !important;
+}
+
+.price__radio {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.price__radio:checked~.price__block {
+    background-color: #ede9ff;
+    border-color: var(--third-hero-block);
+}
+
+.price__radio:checked~.price__block .pricing__item-price {
+    color: var(--third-hero-block);
+}
+
+.price__radio:checked~.price__block .price__title {
+    color: var(--third-hero-block);
+}
+
+.price__block {
+    margin: 0 !important;
+    padding: 20px !important;
+    display: block !important;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #c0cbd1;
+}
+
+.price__title {
+    font-weight: 700;
+    color: #023047;
+}
+
+.prices .pricing__item-price .price {
+    font-size: 35px;
+}
+
+.price__list {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+}

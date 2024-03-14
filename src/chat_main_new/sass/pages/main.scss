@@ -1,0 +1,60 @@
+@use '../variables';
+@use '../base';
+/* base end */
+
+
+/* search start */
+@use '../components/search';
+/* search end */
+
+/* messages start */
+@use '../components/messages';
+/* messages end */
+
+/* lang start */
+@use '../components/lang';
+/* lang end */
+
+/* header start */
+@use '../components/header';
+/* header end */
+
+/* footer start */
+@use '../components/footer';
+/* footer end */
+
+/* hero start */
+@use '../components/hero';
+/* hero end */
+
+/* string start */
+@use '../components/string';
+/* string end */
+
+/* partners start */
+@use '../components/partners';
+/* partners end */
+
+/* selling start */
+@use '../components/selling';
+/* selling end */
+
+/* pricing start */
+@use '../components/pricing';
+/* pricing end */
+
+/* info start */
+@use '../components/info';
+/* info end */
+
+/* feedback start */
+@use '../components/feedback';
+/* feedback end */
+
+/* data start */
+@use '../components/data';
+/* data end */
+
+/* cta start */
+@use '../components/cta';
+/* cta end */
