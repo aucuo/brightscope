@@ -1,7 +1,3 @@
-@use '../variables';
-@use '../base';
-/* base end */
-
 
 /* search start */
 @use '../components/search';
@@ -14,14 +10,6 @@
 /* lang start */
 @use '../components/lang';
 /* lang end */
-
-/* header start */
-@use '../components/header';
-/* header end */
-
-/* footer start */
-@use '../components/footer';
-/* footer end */
 
 /* hero start */
 @use '../components/hero';

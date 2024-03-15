@@ -979,7 +979,6 @@ iframe {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  height: fit-content !important;
 }
 
 @media (max-width: 1023px) {
@@ -993,7 +992,6 @@ iframe {
   color: var(--secondary-color);
   font-size: 15px;
   font-weight: 600;
-  height: 40px;
   line-height: 40px;
   letter-spacing: 1.6px;
   padding: 0 30px;
